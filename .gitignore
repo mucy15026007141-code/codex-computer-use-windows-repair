@@ -1,0 +1,22 @@
+# Generated reports and diagnostics
+repair-report.json
+*.log
+*.sqlite
+*.sqlite3
+
+# Binary and package artifacts
+*.exe
+*.dll
+*.node
+*.crx
+*.zip
+
+# Local runtime work areas and browser data
+.staging-*
+.cua-stage-*
+.cua_node-old-*
+backup-*
+User Data/
+Cookies
+History
+Local State

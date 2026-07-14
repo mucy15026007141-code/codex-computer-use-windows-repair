@@ -1,0 +1,6 @@
+Codex package version: <VERSION>
+Source: C:\Users\<USER>\AppData\Local\Packages\<PACKAGE>\LocalCache\...\cua_node
+Content key: <16-HEX-CHARACTERS>
+Target: C:\Users\<USER>\AppData\Local\OpenAI\Codex\runtimes\cua_node\<KEY>
+Validation: complete
+Recommendation: no repair needed

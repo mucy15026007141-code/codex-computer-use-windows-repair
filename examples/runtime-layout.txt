@@ -1,0 +1,10 @@
+C:\Users\<USER>\AppData\Local\OpenAI\Codex\
+  runtimes\
+    cua_node\
+      <CONTENT-KEY>\
+        manifest.json
+        bin\
+        node_modules\
+        helper_transport.js
+
+Illustrative layout only. No runtime content is included.

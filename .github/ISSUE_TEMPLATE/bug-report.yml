@@ -1,0 +1,20 @@
+name: Bug report
+description: Report a reproducible issue without private runtime or browser data.
+title: "[bug]: "
+labels: [bug]
+body:
+  - type: markdown
+    attributes:
+      value: Do not include user paths, tokens, cookies, browser data, logs, or binary files.
+  - type: input
+    id: version
+    attributes:
+      label: Codex package version
+    validations:
+      required: true
+  - type: textarea
+    id: diagnostic
+    attributes:
+      label: Redacted diagnostic result and steps
+    validations:
+      required: true
