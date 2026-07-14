@@ -373,8 +373,8 @@ This project also does not address:
 
 - [Root cause analysis](docs/ROOT-CAUSE.md)
 - [Complete Chinese case study](docs/CASE-STUDY.zh-CN.md)
-- [Troubleshooting](docs/TROUBLESHOOTING.zh-CN.md)
-- [Safety notes](docs/SAFETY.zh-CN.md)
+- [Troubleshooting (Chinese)](docs/TROUBLESHOOTING.zh-CN.md)
+- [Safety notes (Chinese)](docs/SAFETY.zh-CN.md)
 - [Browser integration status](docs/BROWSER-INTEGRATION-STATUS.md)
 - [Redacted successful output](examples/successful-output.redacted.txt)
 - [Runtime directory layout](examples/runtime-layout.txt)
