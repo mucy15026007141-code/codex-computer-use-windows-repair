@@ -380,6 +380,7 @@ Browser 仍存在独立问题，例如：
 - [浏览器集成状态](docs/BROWSER-INTEGRATION-STATUS.md)
 - [成功输出示例](examples/successful-output.redacted.txt)
 - [runtime 目录结构](examples/runtime-layout.txt)
+- [更新日志](CHANGELOG.md)
 
 ## 提交反馈
 
@@ -394,6 +395,8 @@ Browser 仍存在独立问题，例如：
 7. 说明插件是“显示不可用”还是“可见但不能使用”。
 
 欢迎提交其他版本和设备的脱敏测试结果。
+
+请使用 [Bug Report 模板](https://github.com/mucy15026007141-code/codex-computer-use-windows-repair/issues/new/choose) 提交脱敏后的反馈。
 
 ## 免责声明
 

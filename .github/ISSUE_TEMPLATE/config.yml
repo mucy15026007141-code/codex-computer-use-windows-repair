@@ -1,0 +1,11 @@
+blank_issues_enabled: false
+contact_links:
+  - name: English README
+    url: https://github.com/mucy15026007141-code/codex-computer-use-windows-repair/blob/main/README.md
+    about: Read the supported scope, safety boundary, and read-only diagnostic steps first.
+  - name: 中文 README
+    url: https://github.com/mucy15026007141-code/codex-computer-use-windows-repair/blob/main/README.zh-CN.md
+    about: 先查看中文使用说明、验证范围和安全边界。
+  - name: 故障排查文档
+    url: https://github.com/mucy15026007141-code/codex-computer-use-windows-repair/blob/main/docs/TROUBLESHOOTING.zh-CN.md
+    about: 提交前先运行只读诊断，并查看已知限制。

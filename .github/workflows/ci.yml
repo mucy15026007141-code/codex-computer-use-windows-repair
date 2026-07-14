@@ -1,0 +1,45 @@
+name: CI
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  test:
+    runs-on: windows-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Install Pester 3.4.0
+        shell: powershell
+        run: |
+          Install-Module -Name Pester -RequiredVersion 3.4.0 -Scope CurrentUser -Force
+          Import-Module Pester -RequiredVersion 3.4.0 -Force
+          if ((Get-Module Pester).Version -ne [version]'3.4.0') {
+            throw 'Pester 3.4.0 was not loaded.'
+          }
+
+      - name: Check PowerShell syntax
+        shell: powershell
+        run: |
+          $failed = $false
+          Get-ChildItem -LiteralPath .\scripts -Filter *.ps1 -File | ForEach-Object {
+            $tokens = $null
+            $errors = $null
+            [void][System.Management.Automation.Language.Parser]::ParseFile($_.FullName, [ref]$tokens, [ref]$errors)
+            if ($errors.Count -gt 0) {
+              $errors | ForEach-Object { Write-Error "$($_.Extent.File):$($_.Extent.StartLineNumber): $($_.Message)" }
+              $failed = $true
+            }
+          }
+          if ($failed) { exit 1 }
+
+      - name: Run Pester tests without Apply
+        shell: powershell
+        run: Invoke-Pester -Script .\tests -EnableExit

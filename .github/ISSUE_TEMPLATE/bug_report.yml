@@ -1,0 +1,122 @@
+name: Bug report
+description: Report a reproducible runtime, Computer Use, Browser, or hatch-pet problem.
+title: "[bug]: "
+labels: [bug]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Before submitting, run the read-only diagnostic: `./scripts/Test-CodexComputerUseRuntime.ps1`.
+
+        Remove usernames, email addresses, tokens, cookies, and personal paths. Do not upload the full `logs_2.sqlite`, or any Codex, Node, Electron, or WindowsApps binary files.
+  - type: dropdown
+    id: issue_type
+    attributes:
+      label: Issue type
+      options:
+        - Computer Use unavailable
+        - Computer Use visible but cannot control Windows
+        - Browser unavailable or disconnected
+        - hatch-pet unavailable or not working
+        - Read-only diagnostic result is unexpected
+        - Repair result is unexpected
+        - Other
+    validations:
+      required: true
+  - type: input
+    id: windows_version
+    attributes:
+      label: Windows version
+      placeholder: Windows 11 23H2 (build 22631.x)
+    validations:
+      required: true
+  - type: input
+    id: codex_version
+    attributes:
+      label: Codex Desktop version
+      placeholder: OpenAI.Codex 26.x.x.x
+    validations:
+      required: true
+  - type: dropdown
+    id: installation_source
+    attributes:
+      label: Installation source
+      options:
+        - Microsoft Store
+        - Other source
+        - Unknown
+    validations:
+      required: true
+  - type: input
+    id: powershell_version
+    attributes:
+      label: PowerShell version
+      placeholder: Windows PowerShell 5.1 or PowerShell 7.x
+    validations:
+      required: true
+  - type: dropdown
+    id: computer_use_status
+    attributes:
+      label: Computer Use status
+      options:
+        - Unavailable
+        - Visible but cannot control Windows
+        - Working
+        - Not tested
+    validations:
+      required: true
+  - type: dropdown
+    id: browser_status
+    attributes:
+      label: Browser status
+      options:
+        - Unavailable
+        - Visible but disconnected or not initialized
+        - Working
+        - Not tested
+    validations:
+      required: true
+  - type: dropdown
+    id: hatch_pet_status
+    attributes:
+      label: hatch-pet status
+      options:
+        - Unavailable
+        - Available but not working
+        - Working
+        - Not tested
+    validations:
+      required: true
+  - type: textarea
+    id: read_only_diagnostic
+    attributes:
+      label: Redacted read-only diagnostic output
+      description: Paste the redacted output from Test-CodexComputerUseRuntime.ps1. Do not run -Apply just to file an issue.
+      render: text
+    validations:
+      required: true
+  - type: textarea
+    id: redacted_logs
+    attributes:
+      label: Relevant redacted logs
+      description: Include only relevant excerpts. Never upload the complete logs_2.sqlite or binary files.
+      render: text
+    validations:
+      required: false
+  - type: dropdown
+    id: apply_used
+    attributes:
+      label: Have you run Repair-CodexComputerUseRuntime.ps1 with -Apply?
+      options:
+        - No
+        - Yes
+        - Not sure
+    validations:
+      required: true
+  - type: textarea
+    id: additional_context
+    attributes:
+      label: Additional context
+      description: Add reproducible steps, expected behavior, and actual behavior. Keep all personal information removed.
+    validations:
+      required: false

@@ -378,6 +378,7 @@ This project also does not address:
 - [Browser integration status](docs/BROWSER-INTEGRATION-STATUS.md)
 - [Redacted successful output](examples/successful-output.redacted.txt)
 - [Runtime directory layout](examples/runtime-layout.txt)
+- [Changelog](CHANGELOG.md)
 
 ## Reporting Issues
 
@@ -392,6 +393,8 @@ Before opening an Issue:
 7. explain whether the plugin is shown as unavailable or is visible but unusable.
 
 Redacted results from other versions and devices are welcome.
+
+Use the [Bug report template](https://github.com/mucy15026007141-code/codex-computer-use-windows-repair/issues/new/choose) to submit a redacted report.
 
 ## Disclaimer
 
